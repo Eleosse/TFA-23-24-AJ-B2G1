@@ -5,6 +5,7 @@ body{
     background-color: #141015;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     list-style: none;
 }
 .container{
@@ -129,4 +130,38 @@ body{
 }
 .img{
     width: 100%;
+}
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+}
+
+#layer1 {
+    background-image: url('../assets/images/bg-intro-mb/para1.png');
+    z-index: 1;
+}
+
+#layer2 {
+    background-image: url('../assets/images/bg-intro-mb/para2.png');
+    z-index: 2;
+}
+
+#layer3 {
+    background-image: url('../assets/images/bg-intro-mb/para3.png');
+    z-index: 3;
+}
+
+#layer4 {
+    background-image: url('../assets/images/bg-intro-mb/para4.png');
+    z-index: 4;
 }
