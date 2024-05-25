@@ -1,6 +1,7 @@
 @import 'utils/variables';
 @import 'components/type';
 @import 'components/nav';
+@import 'components/intro';
 
 body{
     background-color: $c-bg;
@@ -14,123 +15,50 @@ body{
     min-width: 350px;
 }
 
-
-
-
-@keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: scale(0.8) rotate(5deg);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.05) rotate(0deg);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1) rotate(0deg);
-    }
-  }
-@keyframes veil {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-.intro__bg{
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 844px;
-    &--img{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        opacity: 0;
-        transform: scale(0.8) rotate(5deg);
-        animation: fadeIn 1s forwards ease-out;
-    }
-    @for $i from 1 through 65 {
-        &--img:nth-child(#{$i}) {
-          background-image: url('../assets/images/bg-intro-mb/#{$i}.png');
-          animation-delay: #{$i * 0.1}s;
-        }
-      }
-    &--img:nth-child(66){
-        background-image: url('../assets/images/bg-intro-mb/69.svg');
-        opacity: 1;
-        transform: translateY(-100%);
-        animation: veil 2s forwards ease-in-out;
-        animation-delay: #{65 * 0.1 + 1}s;
-    }
+.presentation{
+  position: relative;
+  top: -210px;
 }
-.intro__cadre{
-    top: -525px;
+.transitionUP__section{
+  height: 25px;
+  &--img{
+    background-image: url(../assets/images/transisvg.svg);
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+}
+.cards{
+  display: flex;
+  width: 100%;
+  height: 300px;
+  &__el{
     position: relative;
-    height: 200px;
-    opacity: 0; 
-    animation: appear 2s forwards;
-    animation-delay: #{65 * 0.1 + 2}s;
-    &--img{
-        position: absolute;
-        opacity: 0.8;
-        width: 100%;
-        height: 100%;
-    }
-    &--nom{
-        position: absolute;
-        width: 75%;
-        right: 0;
-        left: 0;
-        margin-top: 4%;
-        margin-left: auto;
-        margin-right: auto;
-        animation: blink 2s infinite alternate;
-        animation-delay: #{65 * 0.1 + 3}s;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    &--wrapper{
+      transition: all 0.5s;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      width: 100%;
+      z-index: -1;
+      .cover-image{
+        width: 33.33vw;
+        height: 300px;
+        object-fit: cover;
+      }
     }
     &--title{
-        position: absolute;
-        width: 75%;
-        right: 0;
-        left: 0;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 33%;
-        animation: blink 2s infinite alternate;
-        animation-delay: #{65 * 0.1 + 3}s;
+      width: 100%;
     }
-}
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes slide-up {
-    from {
-      transform: translateY(25px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
+    &--character{
+      display: none;
     }
   }
-  @keyframes blink {
-    from {
-        opacity: 0.1;
-    }
-    to {
-        opacity: 1;
-    }
 }
+
+
+
+
