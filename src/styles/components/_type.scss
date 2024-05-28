@@ -7,3 +7,9 @@ body {
   color: $c-text;
 }
 
+@media (min-width: 580px) {
+  body {
+    font-size: 18px;
+  }
+}
+

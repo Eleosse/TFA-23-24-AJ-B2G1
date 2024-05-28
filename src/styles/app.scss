@@ -2,6 +2,7 @@
 @import 'components/type';
 @import 'components/nav';
 @import 'components/intro';
+@import 'components/presentation';
 
 body{
     background-color: $c-bg;
@@ -15,97 +16,28 @@ body{
     min-width: 350px;
 }
 
-.presentation{
+.work{
   position: relative;
-  background-image: url(../assets/images/dot-bg.svg);
-  background-position: 0 0;
-  background-size: 60px;
-  background-attachment: fixed;
-  top: -210px;
-  &__title{
-    margin-left: 25px;
-    margin-bottom: 20%;
-    font-size: 32px;
-  }
-}
-.transitionUP__section{
-  height: 25px;
-  &--img{
-    background-image: url(../assets/images/transisvg.svg);
-    background-repeat: no-repeat;
-    height: 100%;
-  }
-}
-.cards{
-  display: flex;
-  width: 100%;
-  height: 300px;
-  position: relative;
-  z-index: 10;
-  &__el{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    &--wrapper{
-      transition: all 0.5s;
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      width: 100%;
-      z-index: -1;
-      .cover-image{
-        width: 33.33vw;
-        height: 300px;
-        object-fit: cover;
-      }
-    }
-    &--title{
-      width: 100%;
-    }
-    &--character{
-      display: none;
-    }
-  }
-}
-
-.presentation__section{
-  margin-top: 20%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  &--title{
-    font-size: 24px;
-    text-align: right;
-    position: relative;
-    padding-bottom: 10px;
+  top: -260px;
+  &__bg{
     width: 100%;
-    right: 25px;
-    margin-top: 0;
-  }
-  &--title::after{
-    content: '';
-    position: absolute;
-    right: -25px;
-    bottom: 0;
-    width: 60%;
-    height: 3px;
-    background: linear-gradient(to right, #00FFFF, #8F00FF, #FF00D4);
-  }
-  &--img{
-    margin-top: 7%;
-    margin-bottom: 7%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-  }
-  &--p{
-    margin-left: 5%;
-    margin-right: 5%;
+    height: 800px;
+    &--video{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 
-
+@media (min-width: 500px) {
+  .work{
+    top: -270px;
+  }
+}
+@media (min-width: 700px) {
+  .work{
+    top: -280px;
+  }
+}
 
