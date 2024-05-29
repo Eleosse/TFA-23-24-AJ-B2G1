@@ -19,9 +19,12 @@ body{
 .work{
   position: relative;
   top: -260px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   &__bg{
     width: 100%;
-    height: 800px;
+    height: 860px;
     &--video{
       width: 100%;
       height: 100%;
@@ -38,6 +41,93 @@ body{
 @media (min-width: 700px) {
   .work{
     top: -280px;
+  }
+}
+
+.project{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__el{
+      width: 100%;
+      &--active{
+          .project__modal{
+              opacity: 1;
+              pointer-events: all;
+              transform: translate(-50%, -50%);
+          }
+          .project__overlay{
+              opacity: .5;
+              pointer-events: all;
+          }
+      }
+  }
+  &__avatar{
+      margin: 0;
+      background-color: rgba(20, 16, 21, 0.700);
+      padding: 10px 30px 10px 30px;
+      border-radius: 8px;
+      margin-bottom: 5%;
+      &--img{
+          width: 80px;
+          height: 130px;
+      }
+      &--name{
+        text-align: center;
+        color: $c-text;
+        text-transform: uppercase;
+      }
+  }
+  &__link{
+      text-decoration: none;
+  }
+  &__modal{
+      position: absolute;
+      width: 200%;
+      height: 765px;
+      top: 53%; //viewport
+      left: 50%; //viewport
+      background-color: rgba(20, 16, 21, 0.700); // sa taille à lui
+      transform: translate(-50%, -60%);
+      padding: 10px 25px 25px;
+      z-index: 15;
+      opacity: 0;
+      pointer-events: none;
+      transition: .3s;
+  }
+  &__close{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap;
+      background-color: inherit;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
+      background-image: url(../assets/images/iconmonstr-x-mark-circle-lined.svg);
+
+  }
+  &__overlay{
+      background-color: #000;
+      opacity: .5;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      opacity: 0;
+      pointer-events: none; //invisible a la souris
+      transition: .3s;
   }
 }
 
