@@ -91,7 +91,7 @@
       bottom: 0;
       width: 60%;
       height: 3px;
-      background: linear-gradient(to right, #00FFFF, #8F00FF, #FF00D4);
+      background: linear-gradient(to right, $c-blue, $c-purple, $c-pink);
     }
     &--img{
       margin-top: 7%;
