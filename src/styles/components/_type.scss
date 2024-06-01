@@ -6,10 +6,17 @@ body {
   line-height: 1.5;
   color: $c-text;
 }
-
+@mixin gradient-text {
+  background: linear-gradient(to right, $c-pink, $c-purple, $c-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-text {
+  @include gradient-text;
+  color: $c-text;
+}
 @media (min-width: 580px) {
   body {
     font-size: 18px;
   }
 }
-
