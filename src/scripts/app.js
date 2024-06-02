@@ -29,3 +29,22 @@ function activeModal(event){
         projectElement.classList.remove("project__el--active")
     }
 }
+
+const translations = [
+    "Salutations",
+    "Greetings",
+    "Groeten",
+    "Grüße",
+    "Saludos",      
+    "Saluti"
+];
+
+let currentIndex = 0;
+
+function changeTitle() {
+    const titleElement = document.querySelector('.presentation__section--title');
+    titleElement.innerText = translations[currentIndex];
+    currentIndex = (currentIndex + 1) % translations.length;
+}
+
+setInterval(changeTitle, 1500);
