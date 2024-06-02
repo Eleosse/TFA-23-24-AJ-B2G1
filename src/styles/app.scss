@@ -21,11 +21,15 @@ body{
   top: -280px;
   width: 100%;
   position: relative;
+  background-image: url(../assets/images/dot-bg.svg);
+  background-position: 0 0;
+  background-size: 60px;
+  background-attachment: fixed;
   .transitionUP__section{
     margin-bottom: 20%;
   }
   &__title{
-    font-size: 24px;
+    font-size: 32px;
     text-align: right;
     position: relative;
     padding-bottom: 10px;
