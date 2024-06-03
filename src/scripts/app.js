@@ -1,20 +1,24 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("loading-screen").style.display = "none";
-    document.getElementById("content").style.display = "block";
-    var video = document.getElementById('video');
-      
+    setTimeout(function() {
+        document.getElementById("loading-screen").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    }, 1000);
+    var videos = document.querySelectorAll('.video');
+
     function playVideo() {
-        video.play().catch(function(error) {
-            console.log("Lecture automatique bloquée : " + error);
+        videos.forEach(function(video) {
+            video.play().catch(function(error) {
+                console.log("Lecture automatique bloquée : " + error);
+            });
         });
     }
-      
+    
     playVideo();
-      
+    
     document.body.addEventListener('click', playVideo);
-    document.body.addEventListener('touchstart', playVideo);
+    document.body.addEventListener('touchstart', playVideo)
 });
 
 const menuBurger = document.querySelector('.menu__burger');
