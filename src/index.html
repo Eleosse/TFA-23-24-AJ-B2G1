@@ -18,7 +18,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body class="container">
-  <main>
+  <div id="loading-screen">
+    <div class="spinner">
+      <div class="spinner1"></div>
+    </div>
+  </div>
+  <main id="content" style="display:none;">
     <header class="nav">
       <nav class="menu">
         <a href="index.html" class="menu__home">
@@ -106,7 +111,7 @@
         <div class="intro__bg--img"></div>
       </div>
       <div class="intro__cadre">
-        <video loop muted autoplay playsinline class="intro__cadre--video" src="assets/images/video/cadre-intro3.mp4"></video>
+        <video loop muted autoplay playsinline class="intro__cadre--video" id="video" src="assets/images/video/cadre-intro3.mp4"></video>
       </div>
     </div>
     <section class="presentation" id="presentation">
@@ -154,7 +159,7 @@
     <section class="work" id="work">
       <h2 class="work__title title">Project</h2>
       <div class="work__bg">
-        <video muted autoplay loop playsinline class="work__bg--video" src="assets/images/video/bg-work.mp4"></video>
+        <video muted autoplay loop playsinline class="work__bg--video" id="video" src="assets/images/video/bg-work.mp4"></video>
       </div>
       <ul class="project">
         <li class="project__el">
@@ -250,7 +255,7 @@
             <img class="project__modal--img image__right" src="assets/images/work-visuel/iolce-post2.jpg" srcset="assets/images/work-visuel/iolce-post2@2x.jpg 2x" alt="screenshot de mes prototypes sur adobe XD">
             <h4 class="project__modal--subtitle">Défis et solutions</h4>
             <p class="project__modal--txt">C'est le deuxième site que je réalise, et mon défi était d'intégrer des grilles. En montrant comment j'ai créé mes grilles, mon professeur m'a indiqué que je suivais une méthode, celle du 8-point grid. Sans le savoir, j'ai donc appliqué les principes de cette méthode pour mes grilles, et depuis, c'est devenu un automatisme pour moi.</p>
-            <video muted loop autoplay playsinline class="project__modal--video" src="assets/images/video/iocle-post3.mp4"></video>
+            <video muted loop autoplay playsinline id="video" class="project__modal--video" src="assets/images/video/iocle-post3.mp4"></video>
             <a class="project__modal--link" target="_blank" href="https://jessy-allard.be/projets/iolce/">
               <span>Site Web</span>
             </a>
@@ -282,7 +287,7 @@
             </ul>
             <h4 class="project__modal--subtitle">Défis et solutions</h4>
             <p class="project__modal--txt">La mise en pratique des méthodes de Design Thinking était un vrai défi. Nous avons commencé par comprendre nos utilisateurs avec des interviews. Suite à ces interviews, nous avons pu identifier les problèmes grâce à des analyses verticales et horizontales des réponses. Nous avons ensuite procédé au prototypage et à la conception des idées, en les testant par la suite afin de récupérer des feedbacks pour obtenir le meilleur résultat possible.</p>
-            <video muted loop autoplay playsinline class="project__modal--video" src="assets/images/video/rux-post3.mp4"></video>
+            <video muted loop autoplay playsinline id="video" class="project__modal--video" src="assets/images/video/rux-post3.mp4"></video>
             <a class="project__modal--link" target="_blank" href="https://jessy-allard.be/projets/rethinking-ux/">
               <span>Site Web</span>
             </a>

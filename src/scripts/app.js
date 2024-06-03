@@ -1,5 +1,22 @@
 "use strict";
 
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("loading-screen").style.display = "none";
+    document.getElementById("content").style.display = "block";
+    var video = document.getElementById('video');
+      
+    function playVideo() {
+        video.play().catch(function(error) {
+            console.log("Lecture automatique bloquée : " + error);
+        });
+    }
+      
+    playVideo();
+      
+    document.body.addEventListener('click', playVideo);
+    document.body.addEventListener('touchstart', playVideo);
+});
+
 const menuBurger = document.querySelector('.menu__burger');
 const menu = document.querySelector('.menu');
 
