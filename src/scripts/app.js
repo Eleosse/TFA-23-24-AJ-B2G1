@@ -1,7 +1,7 @@
 "use strict";
 import gsap from 'gsap';
 
-document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("load", function() {
         document.getElementById("loading-screen").style.display = "none";
         document.getElementById("content").style.display = "block";
     var videos = document.querySelectorAll('.video');
@@ -21,10 +21,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const menuBurger = document.querySelector('.menu__burger');
+const menuOver = document.querySelector('.menu__overlay');
 const menu = document.querySelector('.menu');
 
 menuBurger.addEventListener('click', function(){
     menu.classList.toggle('menu--open');
+})
+
+menuOver.addEventListener('click', function(){
+  menu.classList.remove('menu--open');
 })
 
 const teamLinks = document.querySelectorAll(".project__link");

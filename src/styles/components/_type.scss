@@ -11,9 +11,15 @@ body {
   overflow-x: hidden;
   list-style: none;
 }
+.big-title{
+  font-family: $font-title;
+  font-weight: 800;
+  font-size: 40px;
+}
 .title{
   font-family: $font-title;
   font-weight: 800;
+  font-size: 32px;
 }
 .uppercase{
   text-transform: uppercase;
