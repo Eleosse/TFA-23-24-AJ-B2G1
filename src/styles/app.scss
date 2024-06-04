@@ -53,30 +53,65 @@
     margin-left: 5%;
     margin-right: 5%;
   }
-  &__el{
-    display: flex;
+  &__ps{
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
     margin-top: 3%;
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
+    height: 500px;
     &--img{
       width: 100%;
-      height: 200px;
+      height: 100%;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
     &--img:nth-child(1){
-      background-image: url(../assets/images/cards/ezreal.png);
+      grid-column: 1 / 3;
+      grid-row: 1/ 3;
+      background-image: url(../assets/images/skills-vis/mix-mediart.gif);
     }
     &--img:nth-child(2){
-      background-image: url(../assets/images/cards/trollzandala.jpg);
+      grid-column: 3 / 5;
+      grid-row: 1/ -1;
+      background-image: url(../assets/images/skills-vis/troll-dessin.jpg);
     }
     &--img:nth-child(3){
-      background-image: url(../assets/images/cards/hanzo.jpg);
+      grid-column: 1 / 2;
+      grid-row: 3/ 4;
+      background-image: url(../assets/images/skills-vis/phot-gif1.gif);
     }
     &--img:nth-child(4){
-      background-image: url(../assets/images/dessin-ordi-base.jpeg);
+      grid-column: 2 / 3;
+      grid-row: 3/ 4;
+      background-image: url(../assets/images/skills-vis/phot-gif2.gif);
+    }
+    &--img:nth-child(5){
+      grid-column: 1 / 2;
+      grid-row: 4/ 5;
+      background-image: url(../assets/images/skills-vis/phot-gif3.gif);
+    }
+    &--img:nth-child(6){
+      grid-column: 2 / 3;
+      grid-row: 4/ 5;
+      background-image: url(../assets/images/skills-vis/phot-gif4.gif);
+    }
+  }
+  &__defi{
+    display: none;
+    margin-top: 3%;
+    width: 80%;
+    margin-left: 15%;
+    margin-right: 5%;
+    &--txt{
+      font-size: 14px;
+    }
+    &--vid{
+      width: 100%;
     }
   }
   .para-right{

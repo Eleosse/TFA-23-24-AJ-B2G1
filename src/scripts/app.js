@@ -1,4 +1,5 @@
 "use strict";
+import gsap from 'gsap';
 
 document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("loading-screen").style.display = "none";
@@ -68,33 +69,26 @@ function changeTitle() {
 
 setInterval(changeTitle, 1500);
 
-document.addEventListener("DOMContentLoaded", function() {
-    const checkbox = document.getElementById('checkbox');
-    const imgElements = document.querySelectorAll('.skills__el--img');
-  
-    const originalImages = [
-      '../assets/images/cards/ezreal.png',
-      '../assets/images/cards/trollzandala.jpg',
-      '../assets/images/cards/hanzo.jpg',
-      '../assets/images/dessin-ordi-base.jpeg'
-    ];
-  
-    const newImages = [
-      '../assets/images/cards/ezrealV1.png',
-      '../assets/images/cards/trollzandalaV1.png',
-      '../assets/images/cards/hanzoV1.png',
-      '../assets/images/dessin-ordi.png'
-    ];
-  
-    checkbox.addEventListener('change', function() {
-      if (checkbox.checked) {
-        imgElements.forEach((img, index) => {
-          img.style.backgroundImage = `url(${newImages[index]})`;
-        });
-      } else {
-        imgElements.forEach((img, index) => {
-          img.style.backgroundImage = `url(${originalImages[index]})`;
-        });
-      }
-    });
-  });
+document.getElementById('checkbox').addEventListener('change', function() {
+  var skillsPs = document.querySelector('.skills__ps');
+  if (this.checked) {
+    skillsPs.style.display = 'grid';
+    gsap.to(skillsPs, { opacity: 1, ease: "power2.inOut" });
+  } else {
+    gsap.to(skillsPs, { opacity: 0, ease: "power2.inOut", onComplete: function() {
+      skillsPs.style.display = 'none';
+    }});
+  }
+});
+
+document.getElementById('checkbox2').addEventListener('change', function() {
+  var skillsDef = document.querySelector('.skills__defi');
+  if (this.checked) {
+    skillsDef.style.display = 'block';
+    gsap.to(skillsDef, { opacity: 1, ease: "power2.inOut" });
+  } else {
+    gsap.to(skillsDef, { opacity: 0, ease: "power2.inOut", onComplete: function() {
+      skillsDef.style.display = 'none';
+    }});
+  }
+});
