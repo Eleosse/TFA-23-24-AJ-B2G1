@@ -53,15 +53,31 @@
     margin-left: 5%;
     margin-right: 5%;
   }
-  &__ps{
-    margin-top: 9%;
+  &__el{
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  &__ps span{
+    margin-top: 3%;
+    width: 90%;
     margin-left: 5%;
     margin-right: 5%;
+    &--img{
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &--img:nth-child(1){
+      background-image: url(../assets/images/cards/ezreal.png);
+    }
+    &--img:nth-child(2){
+      background-image: url(../assets/images/cards/trollzandala.jpg);
+    }
+    &--img:nth-child(3){
+      background-image: url(../assets/images/cards/hanzo.jpg);
+    }
+    &--img:nth-child(4){
+      background-image: url(../assets/images/dessin-ordi-base.jpeg);
+    }
   }
   .para-right{
     margin-left: 10%;

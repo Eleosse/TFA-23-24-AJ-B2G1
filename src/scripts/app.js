@@ -67,3 +67,34 @@ function changeTitle() {
 }
 
 setInterval(changeTitle, 1500);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const checkbox = document.getElementById('checkbox');
+    const imgElements = document.querySelectorAll('.skills__el--img');
+  
+    const originalImages = [
+      '../assets/images/cards/ezreal.png',
+      '../assets/images/cards/trollzandala.jpg',
+      '../assets/images/cards/hanzo.jpg',
+      '../assets/images/dessin-ordi-base.jpeg'
+    ];
+  
+    const newImages = [
+      '../assets/images/cards/ezrealV1.png',
+      '../assets/images/cards/trollzandalaV1.png',
+      '../assets/images/cards/hanzoV1.png',
+      '../assets/images/dessin-ordi.png'
+    ];
+  
+    checkbox.addEventListener('change', function() {
+      if (checkbox.checked) {
+        imgElements.forEach((img, index) => {
+          img.style.backgroundImage = `url(${newImages[index]})`;
+        });
+      } else {
+        imgElements.forEach((img, index) => {
+          img.style.backgroundImage = `url(${originalImages[index]})`;
+        });
+      }
+    });
+  });
