@@ -165,6 +165,9 @@
       &--el{
         font-size: 14px;
       }
+      &--el a{
+        text-decoration: none;
+      }
     }
   }
   &__btn{
