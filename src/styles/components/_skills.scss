@@ -1,0 +1,121 @@
+.skills{
+    top: -280px;
+    width: 100%;
+    position: relative;
+    background-image: url(../assets/images/dot-bg.svg);
+    background-position: 0 0;
+    background-size: 50px;
+    background-attachment: fixed;
+    .transitionUP__section{
+      margin-bottom: 20%;
+    }
+    &__title{
+      font-size: 32px;
+      text-align: right;
+      position: relative;
+      padding-bottom: 10px;
+      margin-top: 0;
+      margin-right: 5%;
+      margin-bottom: 20%;
+    }
+    &__title::after{
+      content: '';
+      position: absolute;
+      right: 0px;
+      bottom: 0;
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(to right, $c-blue, $c-purple, $c-pink);
+    }
+    .last__title{
+      margin-top: 20%;
+      margin-bottom: 9%;
+    }
+    &__subtitle{
+      font-size: 24px;
+      text-align: right;
+      margin-right: 10%;
+      margin-top: 9%;
+      margin-bottom: 3%;
+    }
+    &__para{
+      margin: 0;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    &__ps{
+      display: none;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 3%;
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      height: 500px;
+      &--img{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      &--img:nth-child(1){
+        grid-column: 1 / 3;
+        grid-row: 1/ 3;
+        background-image: url(../assets/images/skills-vis/mix-mediart.gif);
+      }
+      &--img:nth-child(2){
+        grid-column: 3 / 5;
+        grid-row: 1/ -1;
+        background-image: url(../assets/images/skills-vis/troll-dessin.jpg);
+      }
+      &--img:nth-child(3){
+        grid-column: 1 / 2;
+        grid-row: 3/ 4;
+        background-image: url(../assets/images/skills-vis/phot-gif1.gif);
+      }
+      &--img:nth-child(4){
+        grid-column: 2 / 3;
+        grid-row: 3/ 4;
+        background-image: url(../assets/images/skills-vis/phot-gif2.gif);
+      }
+      &--img:nth-child(5){
+        grid-column: 1 / 2;
+        grid-row: 4/ 5;
+        background-image: url(../assets/images/skills-vis/phot-gif3.gif);
+      }
+      &--img:nth-child(6){
+        grid-column: 2 / 3;
+        grid-row: 4/ 5;
+        background-image: url(../assets/images/skills-vis/phot-gif4.gif);
+      }
+    }
+    &__defi{
+      display: none;
+      margin-top: 3%;
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 5%;
+      &--txt{
+        font-size: 14px;
+      }
+      &--vid{
+        width: 100%;
+      }
+    }
+    .para-right{
+      margin-left: 10%;
+      position: relative;
+      padding-left: 5%;
+    }
+    .para-right::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(to bottom, $c-blue, $c-purple, $c-pink);
+    }
+  }

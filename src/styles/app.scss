@@ -6,115 +6,43 @@
 @import 'components/work';
 @import 'components/loadscreen';
 @import 'components/switch';
+@import 'components/skills';
 
 .container{
     max-width: 1920px;
     min-width: 350px;
 }
 
-.skills{
-  top: -280px;
-  width: 100%;
+.subnav{
+  margin-top: -15%;
   position: relative;
-  background-image: url(../assets/images/dot-bg.svg);
-  background-position: 0 0;
-  background-size: 50px;
-  background-attachment: fixed;
-  .transitionUP__section{
-    margin-bottom: 20%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 30px 0 30px 0;
+  & a{
+    text-decoration: none;
+    color: $c-text;
+    font-size: 14px;
+    display: inline-block;
   }
-  &__title{
-    font-size: 32px;
-    text-align: right;
-    position: relative;
-    padding-bottom: 10px;
-    margin-top: 0;
-    margin-right: 5%;
-    margin-bottom: 20%;
-  }
-  &__title::after{
+  &::before{
     content: '';
     position: absolute;
     right: 0px;
-    bottom: 0;
-    width: 60%;
+    top: 0;
+    width: 100%;
     height: 3px;
     background: linear-gradient(to right, $c-blue, $c-purple, $c-pink);
   }
-  &__subtitle{
-    font-size: 24px;
-    text-align: right;
-    margin-right: 10%;
-    margin-top: 9%;
-    margin-bottom: 3%;
-  }
-  &__para{
-    margin: 0;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  &__ps{
-    display: none;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+  &__list{
+    list-style: none;
+    display: flex;
     gap: 10px;
-    margin-top: 3%;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 500px;
-    &--img{
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    &--img:nth-child(1){
-      grid-column: 1 / 3;
-      grid-row: 1/ 3;
-      background-image: url(../assets/images/skills-vis/mix-mediart.gif);
-    }
-    &--img:nth-child(2){
-      grid-column: 3 / 5;
-      grid-row: 1/ -1;
-      background-image: url(../assets/images/skills-vis/troll-dessin.jpg);
-    }
-    &--img:nth-child(3){
-      grid-column: 1 / 2;
-      grid-row: 3/ 4;
-      background-image: url(../assets/images/skills-vis/phot-gif1.gif);
-    }
-    &--img:nth-child(4){
-      grid-column: 2 / 3;
-      grid-row: 3/ 4;
-      background-image: url(../assets/images/skills-vis/phot-gif2.gif);
-    }
-    &--img:nth-child(5){
-      grid-column: 1 / 2;
-      grid-row: 4/ 5;
-      background-image: url(../assets/images/skills-vis/phot-gif3.gif);
-    }
-    &--img:nth-child(6){
-      grid-column: 2 / 3;
-      grid-row: 4/ 5;
-      background-image: url(../assets/images/skills-vis/phot-gif4.gif);
-    }
-  }
-  &__defi{
-    display: none;
-    margin-top: 3%;
-    width: 80%;
-    margin-left: 15%;
-    margin-right: 5%;
-    &--txt{
-      font-size: 14px;
-    }
-    &--vid{
-      width: 100%;
-    }
-  }
-  .para-right{
-    margin-left: 10%;
+    margin: 0;
+    padding: 0;
   }
 }
