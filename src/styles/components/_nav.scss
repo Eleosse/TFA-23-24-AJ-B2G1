@@ -13,7 +13,7 @@
             width: 45px;
             height: 45px;
             padding: 7.5px;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.7);
         }
     }
     &__burger{
@@ -24,7 +24,7 @@
         width: 60px;
         height: 60px;
         transition: 0.4s;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.7);
         cursor: pointer;
         &--lines::before,
         &--lines::after,
@@ -67,21 +67,26 @@
         display: flex;
         flex-flow: column;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(20, 16, 21, 0.8);
+        background-image: url(../assets/images/dot-bg.svg);
+        background-position: 0 0;
+        background-size: 20px;
         overflow-y: auto;
         right: -100%;
         transition: 0.8s;
         &--el{
             padding: 18px 35px;
             font-size: 18px;
-            text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 5px;
             font-weight: 400;
-            color: #BB1E99;
-            border-bottom: 1px solid #fff;
+            border-bottom: 1px solid $c-blue;
+            & a{
+                text-decoration: none;
+                color: $c-text;
+            }
             &:first-child{
-                border-top: 1px solid #fff; 
+                border-top: 1px solid $c-blue; 
             }
         }
         &--el:hover{

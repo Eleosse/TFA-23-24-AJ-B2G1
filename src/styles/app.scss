@@ -5,6 +5,7 @@
 @import 'components/presentation';
 @import 'components/work';
 @import 'components/loadscreen';
+@import 'components/switch';
 
 .container{
     max-width: 1920px;
@@ -17,7 +18,7 @@
   position: relative;
   background-image: url(../assets/images/dot-bg.svg);
   background-position: 0 0;
-  background-size: 60px;
+  background-size: 50px;
   background-attachment: fixed;
   .transitionUP__section{
     margin-bottom: 20%;
@@ -29,6 +30,7 @@
     padding-bottom: 10px;
     margin-top: 0;
     margin-right: 5%;
+    margin-bottom: 20%;
   }
   &__title::after{
     content: '';
@@ -38,5 +40,30 @@
     width: 60%;
     height: 3px;
     background: linear-gradient(to right, $c-blue, $c-purple, $c-pink);
+  }
+  &__subtitle{
+    font-size: 24px;
+    text-align: right;
+    margin-right: 10%;
+    margin-top: 9%;
+    margin-bottom: 3%;
+  }
+  &__para{
+    margin: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  &__ps{
+    margin-top: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__ps span{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .para-right{
+    margin-left: 10%;
   }
 }

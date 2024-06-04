@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function playVideo() {
         videos.forEach(function(video) {
-            video.play().catch(function(error) {
-                console.log("Lecture automatique bloquée : " + error);
+            video.play().catch(function() {
+                // console.log("Lecture automatique bloquée : " + error);
             });
         });
     }

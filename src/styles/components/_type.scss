@@ -20,6 +20,9 @@ body {
 .uppercase{
   text-transform: uppercase;
 }
+.bold{
+  font-weight: bold;
+}
 @mixin gradient-text {
   background: linear-gradient(to right, $c-pink, $c-purple, $c-blue);
   -webkit-background-clip: text;

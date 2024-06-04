@@ -1,16 +1,16 @@
 .presentation{
-    position: relative;
-    background-image: url(../assets/images/dot-bg.svg);
-    background-position: 0 0;
-    background-size: 60px;
-    background-attachment: fixed;
-    top: -220px;
-    &__title{
-      margin-left: 25px;
-      margin-bottom: 20%;
-      font-size: 40px;
-    }
+  position: relative;
+  background-image: url(../assets/images/dot-bg.svg);
+  background-position: 0 0;
+  background-size: 50px;
+  background-attachment: fixed;
+  top: -220px;
+  &__title{
+    margin-left: 25px;
+    margin-bottom: 20%;
+    font-size: 40px;
   }
+}
 .transitionUP__section{
   height: 25px;
   width: 100%;
