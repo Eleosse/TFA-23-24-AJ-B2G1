@@ -74,7 +74,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px){
   .intro__bg{
     height: 500px;
     @for $i from 1 through 65 {
@@ -87,3 +87,19 @@
     top: -350px;
   }
 }
+
+@media (min-width: 1025px) {
+  .intro__bg{
+    height: 950px;
+    @for $i from 1 through 65 {
+      &--img:nth-child(#{$i}) {
+        background-image: url('../assets/images/bg-intro/#{$i}.png');
+      }
+    }
+  }
+  .intro__cadre{
+    top: -600px;
+    height: 350px;
+  }
+}
+
