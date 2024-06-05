@@ -243,6 +243,19 @@
         display: block;
         margin: 0 auto;
       }
+      &--txt{
+        margin-left: 15%;
+      }
+      &--link{
+        margin-left: 40%;
+      }
+      .project__list{
+        margin-left: 50%;
+      }
+    }
+    &__close{
+      width: 66px;
+      height: 66px;
     }
   }
   .paysage{

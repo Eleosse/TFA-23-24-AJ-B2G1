@@ -1,6 +1,7 @@
 .skills{
     top: -280px;
     width: 100%;
+    z-index: 5;
     position: relative;
     background-image: url(../assets/images/dot-bg.svg);
     background-position: 0 0;
@@ -8,6 +9,8 @@
     background-attachment: fixed;
     .transitionUP__section{
       margin-bottom: 20%;
+      position: relative;
+      z-index: 3;
     }
     &__title{
       text-align: right;
@@ -131,4 +134,24 @@
             margin-top: 15%;
         }
     }
-  }
+}
+@media (min-width: 768px){
+    .skills{
+        top: -325px;
+        &__title{
+            margin-bottom: 10%;
+        }
+        &__subtitle{
+            margin-top: 3%;
+        }
+        &__para{
+            margin-left: 15%;
+        }
+        .para-right{
+            margin-left: 20%;
+        }
+        .last__title{
+            margin-bottom: 10%;
+        }
+    }
+}

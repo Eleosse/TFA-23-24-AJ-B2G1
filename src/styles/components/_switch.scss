@@ -2,7 +2,6 @@
     margin-top: 6%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 .checkbox {
     display: none;
@@ -40,4 +39,11 @@
 }
 .checkbox:active ~ .slider::before {
     transform: translate(0);
+}
+
+@media (min-width: 768px){
+    .switch{
+        display: block;
+        margin-left: 25%;
+    }
 }
