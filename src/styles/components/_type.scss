@@ -33,7 +33,7 @@ body {
   font-weight: bold;
 }
 @mixin gradient-text {
-  background: linear-gradient(to right, $c-pink, $c-purple, $c-blue);
+  background: linear-gradient(to top, $c-pink 0%, $c-blue 75%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

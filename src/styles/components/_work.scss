@@ -56,7 +56,7 @@
     padding: 10px 30px 10px 30px;
     border-radius: 8px;
     margin-bottom: 5%;
-    box-shadow: 5px 8px 20px rgba(20, 16, 21, 0.300);
+    box-shadow: 5px 8px 20px rgba(20, 16, 21, 0.7);
     &--img{
       width: 80px;
       height: 130px;
@@ -64,7 +64,6 @@
     &--name{
       text-align: center;
       color: $c-text;
-      text-transform: uppercase;
     }
   }
   &__link{

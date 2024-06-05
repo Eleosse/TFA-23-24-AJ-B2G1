@@ -26,7 +26,7 @@
   <main id="content">
     <header class="nav">
       <nav class="menu">
-        <a href="index.html" class="menu__home">
+        <a href="#intro" class="menu__home smooth-scroll">
           <span class="menu__home--txt">Home</span>
           <svg class="menu__home--img" data-name="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 72.44 64.04"><defs><linearGradient id="a" data-name="Dégradé sans nom 274" x1="23.05" y1="65.26" x2="23.05" y2="26.04" gradientTransform="rotate(17.95 25.075 43.51)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0ff"/><stop offset=".57" stop-color="#8f00ff"/><stop offset="1" stop-color="#ff00d4"/></linearGradient><linearGradient id="b" data-name="Dégradé sans nom 274" x1="45.06" y1="43.24" x2="45.06" y2="1" xlink:href="#a"/></defs><path d="M31.15 53.3c-3.84 6.7-7.84 12.49-20.61 8.35-3.49-1.13-6.43-2.37-9.16-3.89l5.22-9.02c.82.5 2.04 1.01 3.18 1.38 3.39 1.1 4.68.65 6.15-1.92l8.99-15.53c2.16-3.72 6.62-5.44 10.71-4.11l8.25 2.67L31.15 53.3Z" style="fill:url(#a);stroke:#ffffff00;stroke-miterlimit:10;stroke-width:2px"/><path d="m40.03 36.88-3.12 6.36H18.85L38.93 6.23C40.68 3.01 44.05 1 47.72 1h17.33l6.24 42.24H53.83l-.54-6.36H40.03Zm12.23-11.04c-.3-3.36-.66-9.78-.9-13.74h-.42c-1.38 3.84-3.9 9.78-5.64 13.74h6.96Z" style="stroke:#ffffff00;stroke-miterlimit:10;stroke-width:2px;fill:url(#b)"/></svg>
         </a>
@@ -34,9 +34,9 @@
           <div class="menu__burger--lines"></div>
         </div>
         <ul class="menu__liste">
-          <li class="menu__liste--el"><a href="#presentation">About</a></li>
-          <li class="menu__liste--el"><a href="#work">Work</a></li>
-          <li class="menu__liste--el"><a href="#skills">Skills</a></li>
+          <li class="menu__liste--el"><a class="smooth-scroll" href="#presentation">About</a></li>
+          <li class="menu__liste--el"><a class="smooth-scroll" href="#work">Work</a></li>
+          <li class="menu__liste--el"><a class="smooth-scroll" href="#skills">Skills</a></li>
         </ul>
         <div class="menu__overlay"></div>
       </nav>
@@ -153,10 +153,9 @@
         </p>
         <p class="presentation__section--p">
           Je suis à la recherche d'un stage durant la période de novembre à janvier 2024/25. Je vais commencer par mes points faibles&nbsp;: je ne suis vraiment pas doué avec les photocopieuses et les cafetières. Plus sérieusement, j'envisage ce stage comme une opportunité stimulante d'entrer dans le monde du web.
-
         </p>
         <p class="presentation__section--p">
-          L'aspect que je préfère lors du développement de projets, c'est la phase de réflexion et de recherche pour l'UI/UX. Maintenir un ensemble cohérent d'éléments graphiques, penser et réfléchir comme les futurs utilisateurs afin d'envisager leurs comportements et mouvements futurs sur le site, etc.&nbsp;Ce sont toutes ces compétences en rapport avec l'UI/UX qui m'animent.
+          L'aspect que je préfère lors du développement de <a class="gradient-text smooth-scroll" href="#work">projets</a>, c'est la phase de réflexion et de recherche pour l'UI/UX. Maintenir un ensemble cohérent d'éléments graphiques, penser et réfléchir comme les futurs utilisateurs afin d'envisager leurs comportements et mouvements futurs sur le site, etc.&nbsp;Ce sont toutes ces <a class="gradient-text smooth-scroll" href="#skills">compétences</a> en rapport avec l'UI/UX qui m'animent.
         </p>
         <p></p>
       </div>
@@ -174,7 +173,7 @@
           <a href="#dataplay" class="project__link">
             <figure class="project__avatar">
               <img class="project__avatar--img" src="assets/images/work-visuel/dataplay-logo.svg" alt="logo dataplay">
-              <figcaption class="project__avatar--name">Dataplay</figcaption>
+              <figcaption class="project__avatar--name uppercase">Dataplay</figcaption>
             </figure>
           </a>
           <div class="project__modal">
@@ -194,8 +193,8 @@
             <ul class="project__list">
               <li class="project__list--el">HTML, SCSS, Javascript, JSON</li>
               <li class="project__list--el">Framework : Laravel</li>
-              <li class="project__list--el">Conception : Figma</li>
-              <li class="project__list--el">Gestion : Github</li>
+              <li class="project__list--el">Conception : <a class="gradient-text" target="_blank" href="https://www.figma.com/design/LTWfNdRuiWWZvKWEVws5dl/DataPlay?node-id=61-53&t=FARH6qFCjwf7lHuv-1">Figma</a></li>
+              <li class="project__list--el">Gestion : <a class="gradient-text" target="_blank" href="https://github.com/justinjwebmaster/HEAJ-DataPlay">Github</a></li>
             </ul>
             <h4 class="project__modal--subtitle sub-title">Défis et solutions</h4>
             <p class="project__modal--txt">
@@ -212,7 +211,7 @@
           <a href="#tfa" class="project__link">
             <figure class="project__avatar">
               <img class="project__avatar--img" src="assets/images/work-visuel/tfa-logo.svg" alt="logo tfa">
-              <figcaption class="project__avatar--name">TFA</figcaption>
+              <figcaption class="project__avatar--name uppercase">Tfa</figcaption>
             </figure>
           </a>
           <div class="project__modal">
@@ -231,8 +230,8 @@
             <ul class="project__list">
               <li class="project__list--el">HTML, SCSS, Javascript</li>
               <li class="project__list--el">Framework : Laravel</li>
-              <li class="project__list--el">Conception : <a class="gradient-text" href="#">Figma</a></li>
-              <li class="project__list--el">Gestion : Github</li>
+              <li class="project__list--el">Conception : <a class="gradient-text" target="_blank" href="https://www.figma.com/design/gWID5G5YQCXEbkjNE07aWb/TFA-22%2F23?node-id=0-1&t=Koh0IXeq0HXL5AqE-1">Figma</a></li>
+              <li class="project__list--el">Gestion : <a class="gradient-text" target="_blank" href="https://github.com/Eleosse/Tfa-2022-23-AJ">Github</a></li>
             </ul>
             <img class="project__modal--img image__right" src="assets/images/work-visuel/tc-post2.png" srcset="assets/images/work-visuel/tc-post2@2x.png 2x" alt="Google doc du projet Toxicity Checker">
             <h4 class="project__modal--subtitle sub-title">Défis et solutions</h4>
@@ -250,7 +249,7 @@
           <a href="#iolce" class="project__link">
             <figure class="project__avatar">
               <img class="project__avatar--img" src="assets/images/work-visuel/iolce-logo.svg" alt="logo iolce">
-              <figcaption class="project__avatar--name">Iolce</figcaption>
+              <figcaption class="project__avatar--name uppercase">Iolce</figcaption>
             </figure>
           </a>
           <div class="project__modal">
@@ -268,7 +267,7 @@
             <h4 class="project__modal--subtitle sub-title">Technologies Utilisées</h4>
             <ul class="project__list">
               <li class="project__list--el">HTML, CSS, Javascript</li>
-              <li class="project__list--el">Conception : Adobe XD</li>
+              <li class="project__list--el">Conception : <a class="gradient-text" target="_blank" href="https://xd.adobe.com/view/12dd73ea-6ca5-4883-a331-d1b7f69c577b-478e/">Adobe XD</a></li>
             </ul>
             <img class="project__modal--img image__right" src="assets/images/work-visuel/iolce-post2.jpg" srcset="assets/images/work-visuel/iolce-post2@2x.jpg 2x" alt="screenshot de mes prototypes sur adobe XD">
             <h4 class="project__modal--subtitle sub-title">Défis et solutions</h4>
@@ -286,7 +285,7 @@
           <a href="#rux" class="project__link">
             <figure class="project__avatar">
               <img class="project__avatar--img" src="assets/images/work-visuel/rux-logo.svg" alt="logo rux">
-              <figcaption class="project__avatar--name">Rux</figcaption>
+              <figcaption class="project__avatar--name uppercase">Rux</figcaption>
             </figure>
           </a>
           <div class="project__modal">
@@ -305,7 +304,7 @@
             <h4 class="project__modal--subtitle sub-title">Technologies Utilisées</h4>
             <ul class="project__list">
               <li class="project__list--el">HTML, CSS, Javascript</li>
-              <li class="project__list--el">Conception : Adobe XD</li>
+              <li class="project__list--el">Conception : <a class="gradient-text" target="_blank" href="https://xd.adobe.com/view/1b109d89-d20f-49a9-af55-b6ef3bbcf649-4e43/"></a> Adobe XD</li>
             </ul>
             <h4 class="project__modal--subtitle sub-title">Défis et solutions</h4>
             <p class="project__modal--txt">
@@ -365,7 +364,7 @@
       </p>
     </section>
     <footer class="subnav">
-        <a href="index.html">Jessy&nbsp;Allard&nbsp;©</a>
+        <a class="smooth-scroll" href="#intro">Jessy&nbsp;Allard&nbsp;©</a>
         <ul class="subnav__list">
           <li><a href="mailto:jessy.allard84@gmail.com">Cont@ct</a></li>
           <li><a target="_blank" href="https://www.instagram.com/jessy.a_heaj_dwt/">Instagram</a></li>
