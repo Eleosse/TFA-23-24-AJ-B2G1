@@ -43,3 +43,13 @@
         }
     }
 }
+@media (min-width: 1025px){
+    .subnav{
+        & a{
+            font-size: 22px;
+        }
+        &__list{
+            gap: 60px;
+        }
+    }
+}

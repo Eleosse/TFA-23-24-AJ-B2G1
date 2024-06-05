@@ -41,7 +41,7 @@ body {
   @include gradient-text;
   color: $c-text;
 }
-@media (min-width: 560px) {
+@media (min-width: 560px){
   body {
     font-size: 18px;
   }
@@ -69,17 +69,22 @@ body {
     font-size: 30px;
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1025px){
   body {
     font-size: 26px;
   }
   .big-title{
-    font-size: 48px;
+    font-size: 68px;
   }
   .title{
-    font-size: 40px;
+    font-size: 59px;
   }
   .sub-title{
-    font-size: 32px;
+    font-size: 39px;
+  }
+}
+@media (min-width: 1441px) {
+  .big-title{
+    font-size: 88px;
   }
 }

@@ -250,7 +250,10 @@
         margin-left: 40%;
       }
       .project__list{
-        margin-left: 50%;
+        margin-left: 40%;
+        &--el{
+          font-size: 18px;
+        }
       }
     }
     &__close{
@@ -263,5 +266,140 @@
   }
   .portrait{
     width: 50%;
+  }
+}
+@media (min-width: 1025px){
+  .work{
+    top: -450px;
+    &__bg{
+      height: 950px;
+    }
+  }
+  .project{
+    top: 300px;
+    &__modal{
+      width: 142%;
+      height: 525px;
+      &--txt{
+        margin-bottom: 5%;
+      }
+      &--link{
+        margin-left: 43%;
+      }
+      .project__list{
+        margin-left: 40%;
+        &--el{
+          font-size: 22px;
+        }
+      }
+    }
+    &__close{
+      top: 23px;
+      right: -10px;
+      width: 66px;
+      height: 66px;
+    }
+  }
+  .paysage{
+    width: 70%;
+  }
+  .portrait{
+    width: 40%;
+  }
+}
+@media (min-width: 1441px){
+  .work{
+    top: -520px;
+    &__bg{
+      height: 1050px;
+    }
+  }
+  .project{
+    top: 280px;
+    &__avatar{
+      &--img{
+        width: 160px;
+        height: 260px;
+      }
+    }
+    &__modal{
+      width: 100%;
+      height: 620px;
+      &--txt{
+        margin-bottom: 5%;
+      }
+      &--link{
+        margin-left: 43%;
+      }
+      .project__list{
+        margin-left: 40%;
+        &--el{
+          font-size: 22px;
+        }
+      }
+    }
+    &__close{
+      top: 23px;
+      right: -10px;
+      width: 66px;
+      height: 66px;
+    }
+  }
+  .paysage{
+    width: 70%;
+  }
+  .portrait{
+    width: 40%;
+  }
+}
+@media (min-width: 1700px){
+  .work{
+    top: -550px;
+    &__bg{
+      height: 1180px;
+    }
+  }
+  .project{
+    top: 300px;
+    &__avatar{
+      &--img{
+        width: 160px;
+        height: 260px;
+      }
+    }
+    &__modal{
+      width: 140%;
+      height: 760px;
+      padding-left: 60px;
+      padding-right: 90px;
+      &--txt{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 40%;
+      }
+      &--link{
+        margin-left: 45%;
+        transform: scale(1.5);
+      }
+      &--subtitle{
+        margin-bottom: 3%;
+      }
+      &--subtitle::after{
+        width: 70%;
+      }
+      .project__list{
+        margin-left: 60%;
+        margin-bottom: 3%;
+        &--el{
+          font-size: 22px;
+        }
+      }
+    }
+    &__close{
+      top: 45px;
+      right: -45px;
+      width: 77px;
+      height: 77px;
+    }
   }
 }

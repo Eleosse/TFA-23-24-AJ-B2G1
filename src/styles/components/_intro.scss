@@ -74,7 +74,7 @@
   }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) and (max-width: 1024px){
   .intro__bg{
     height: 500px;
     @for $i from 1 through 65 {
@@ -88,7 +88,22 @@
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1025px) and (max-width: 1440px){
+  .intro__bg{
+    height: 800px;
+    @for $i from 1 through 65 {
+      &--img:nth-child(#{$i}) {
+        background-image: url('../assets/images/bg-intro/#{$i}.png');
+      }
+    }
+  }
+  .intro__cadre{
+    top: -550px;
+    height: 300px;
+    margin-left: 350px;
+  }
+}
+@media (min-width: 1441px){
   .intro__bg{
     height: 950px;
     @for $i from 1 through 65 {
@@ -98,8 +113,10 @@
     }
   }
   .intro__cadre{
-    top: -600px;
+    top: -650px;
     height: 350px;
+    margin-left: 550px;
   }
 }
+
 
