@@ -70,7 +70,7 @@
         background-color: rgba(20, 16, 21, 0.8);
         background-image: url(../assets/images/dot-bg.svg);
         background-position: 0 0;
-        background-size: 20px;
+        background-size: 50px;
         overflow-y: auto;
         right: -100%;
         transition: 0.8s;
@@ -98,8 +98,8 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         z-index: 10;
     }
 }

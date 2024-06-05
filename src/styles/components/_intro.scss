@@ -73,3 +73,17 @@
     width: 100%;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .intro__bg{
+    height: 500px;
+    @for $i from 1 through 65 {
+      &--img:nth-child(#{$i}) {
+        background-image: url('../assets/images/bg-intro-tab/#{$i}.png');
+      }
+    }
+  }
+  .intro__cadre{
+    top: -350px;
+  }
+}

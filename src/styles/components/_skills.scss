@@ -10,7 +10,6 @@
       margin-bottom: 20%;
     }
     &__title{
-      font-size: 32px;
       text-align: right;
       position: relative;
       padding-bottom: 10px;
@@ -23,7 +22,7 @@
       position: absolute;
       right: 0px;
       bottom: 0;
-      width: 60%;
+      width: 70%;
       height: 3px;
       background: linear-gradient(to right, $c-blue, $c-purple, $c-pink);
     }
@@ -116,5 +115,20 @@
       width: 3px;
       height: 100%;
       background: linear-gradient(to bottom, $c-blue, $c-purple, $c-pink);
+    }
+}
+
+@media (min-width: 560px) {
+    .skills{
+        top: -290px;
+        .transitionUP__section{
+            margin-bottom: 15%;
+        }
+        &__title{
+            margin-bottom: 15%;
+        }
+        .last__title{
+            margin-top: 15%;
+        }
     }
   }

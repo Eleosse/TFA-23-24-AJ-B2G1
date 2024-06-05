@@ -14,12 +14,12 @@ body {
 .big-title{
   font-family: $font-title;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 44px;
 }
 .title{
   font-family: $font-title;
   font-weight: 800;
-  font-size: 32px;
+  font-size: 36px;
 }
 .sub-title{
   font-family: $font-title;
@@ -41,8 +41,45 @@ body {
   @include gradient-text;
   color: $c-text;
 }
-@media (min-width: 580px) {
+@media (min-width: 560px) {
   body {
     font-size: 18px;
+  }
+  .big-title{
+    font-size: 51px;
+  }
+  .title{
+    font-size: 41px;
+  }
+  .sub-title{
+    font-size: 27px;
+  }
+}
+@media (min-width: 768px){
+  body {
+    font-size: 20px;
+  }
+  .big-title{
+    font-size: 58px;
+  }
+  .title{
+    font-size: 45px;
+  }
+  .sub-title{
+    font-size: 30px;
+  }
+}
+@media (min-width: 1025px) {
+  body {
+    font-size: 26px;
+  }
+  .big-title{
+    font-size: 48px;
+  }
+  .title{
+    font-size: 40px;
+  }
+  .sub-title{
+    font-size: 32px;
   }
 }

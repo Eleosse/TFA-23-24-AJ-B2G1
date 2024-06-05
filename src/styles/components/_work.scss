@@ -208,3 +208,8 @@
 .image__right{
   margin-left: 10%;
 }
+@media (min-width: 768px){
+  .work{
+    top: -300px;
+  }
+}
