@@ -24,7 +24,7 @@
   width: 100%;
   transform: rotate(180deg);
   margin-bottom: 5%;
-  z-index: 10;
+  z-index: 3;
   position: relative;
   &--img{
     background-image: url(../assets/images/transisvg.svg);
@@ -137,6 +137,7 @@
     margin-top: 10%;
     display: grid;
     grid-template-columns: 5% 1fr 5% 1fr 5%;
+    margin-bottom: 10%;
     &--img{
       width: 100%;
       grid-column: 2/3;

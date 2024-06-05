@@ -118,3 +118,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('.project__modal--img');
+
+  images.forEach(img => {
+      img.addEventListener('load', () => {
+          const width = img.naturalWidth;
+          const height = img.naturalHeight;
+
+          if (width > height) {
+              img.classList.add('paysage');
+          } else {
+              img.classList.add('portrait');
+          }
+      });
+
+      if (img.complete) {
+          const width = img.naturalWidth;
+          const height = img.naturalHeight;
+
+          if (width > height) {
+              img.classList.add('paysage');
+          } else {
+              img.classList.add('portrait');
+          }
+      }
+  });
+});

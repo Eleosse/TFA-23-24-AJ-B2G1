@@ -50,6 +50,9 @@
       }
     }
   }
+  &__link{
+    text-decoration: none;
+  }
   &__avatar{
     margin: 0;
     background-color: rgba(20, 16, 21, 0.700);
@@ -65,9 +68,6 @@
       text-align: center;
       color: $c-text;
     }
-  }
-  &__link{
-    text-decoration: none;
   }
   &__modal{
     position: absolute;
@@ -211,5 +211,44 @@
 @media (min-width: 768px){
   .work{
     top: -300px;
+    &__bg{
+      height: 700px;
+      &--video{
+        position: absolute;
+        z-index: 1;
+      }
+      &--overlay{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        pointer-events: none;
+        background-image: url(../assets/images/ordi.png);
+      }
+    }
+  }
+  .project{
+    z-index: 3;
+    flex-direction: row;
+    top: 200px;
+    gap: 20px;
+    &__modal{
+      width: 100%;
+      height: 400px;
+      &--img{
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  .paysage{
+    width: 80%;
+  }
+  .portrait{
+    width: 50%;
   }
 }
