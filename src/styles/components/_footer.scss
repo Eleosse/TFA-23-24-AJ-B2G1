@@ -11,12 +11,13 @@
     background-color: rgba(250, 250, 250, 0.900);
     border-radius: 8px;
     bottom: 20px;
+    z-index: 1000;
     & a{
         text-decoration: none;
         color: $c-bg;
         font-size: 14px;
         display: inline-block;
-        padding: 18px 0 18px 0;
+        padding: 18px;
     }
     & a:nth-child(1){
         margin-left: 5%;
@@ -45,9 +46,11 @@
 }
 @media (min-width: 1025px){
     .subnav{
-        & a{
-            font-size: 22px;
+        & a:hover{
+            background-color: $c-bg;
+            color: $c-text;
         }
+
         &__list{
             gap: 60px;
         }
