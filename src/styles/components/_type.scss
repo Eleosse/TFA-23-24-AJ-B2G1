@@ -37,6 +37,11 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@mixin gradient-textH {
+  background: linear-gradient(to bottom, $c-pink 0%, $c-blue 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .gradient-text {
   @include gradient-text;
   color: $c-text;

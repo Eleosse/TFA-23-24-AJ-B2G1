@@ -270,13 +270,18 @@
 }
 @media (min-width: 1025px){
   .work{
-    top: -350px;
+    top: -430px;
     &__bg{
       height: 950px;
     }
   }
   .project{
     top: 300px;
+    &__el:hover{
+      .project__avatar{
+        transform: scale(0.8);
+      }
+    }
     &__modal{
       width: 142%;
       height: 525px;
@@ -290,6 +295,10 @@
         margin-left: 40%;
         &--el{
           font-size: 22px;
+        }
+        &--el a:hover{
+          @include gradient-textH;
+          color: $c-text;
         }
       }
     }
