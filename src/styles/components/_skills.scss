@@ -213,4 +213,36 @@
             margin-bottom: 5%;
         }
     }
-  }
+}
+@media (min-width: 1700px){
+    .skills{
+        top: -600px;
+        &__title{
+            margin-bottom: 5%;
+            margin-right: 15%;
+        }
+        &__subtitle{
+            margin-right: 20%;
+        }
+        &__para{
+            margin-left: 20%;
+            margin-right: 15%;
+        }
+        &__ps{
+            height: 800px;
+        }
+        &__defi{
+            width: 70%;
+            margin-left: 20%;
+            &--txt{
+              font-size: 22px;
+            }
+          }
+        .para-right{
+            margin-left: 25%;
+        }
+        .last__title{
+            margin-bottom: 5%;
+        }
+    }
+}

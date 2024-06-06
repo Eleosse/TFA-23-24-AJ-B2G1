@@ -1,41 +1,49 @@
+$animation-delay-factor: 0.1s;
+$total-images: 65;
+$additional-delay: 1s;
+
 @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: scale(0.8) rotate(5deg);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.05) rotate(0deg);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1) rotate(0deg);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(5deg);
   }
-@keyframes veil {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) rotate(0deg);
   }
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
 }
-.intro__bg{
+
+@keyframes veil {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro__bg {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 750px;
-  &--img{
+
+  &--img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -44,22 +52,31 @@
     opacity: 0;
     transform: scale(0.8) rotate(5deg);
     animation: fadeIn 1s forwards ease-out;
-  }
-  @for $i from 1 through 65 {
-      &--img:nth-child(#{$i}) {
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+
+    @for $i from 1 through $total-images {
+      &:nth-child(#{$i}) {
         background-image: url('../assets/images/bg-intro-mb/#{$i}.png');
-        animation-delay: #{$i * 0.1}s;
+        animation-delay: $i * $animation-delay-factor;
       }
     }
-  &--img:nth-child(66){
-    background-image: url('../assets/images/bg-intro-mb/69.svg');
-    opacity: 1;
-    transform: translateY(-100%);
-    animation: veil 2s forwards ease-in-out;
-    animation-delay: #{65 * 0.1 + 1}s;
+
+    &:nth-child(#{$total-images + 1}) {
+      background: none; /* Supprimer tout fond préexistant */
+      opacity: 1;
+      transform: translateY(-100%);
+      animation: veil 2s forwards ease-in-out;
+      animation-delay: $total-images * $animation-delay-factor + $additional-delay;
+      
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
-.intro__cadre{
+
+.intro__cadre {
   top: -475px;
   position: relative;
   opacity: 0; 
@@ -68,55 +85,58 @@
   border-radius: 25px;
   justify-content: center;
   animation: appear 2s forwards;
-  animation-delay: #{65 * 0.1 + 2}s;
-  &--video{
+  animation-delay: $total-images * $animation-delay-factor + $additional-delay + 1s;
+
+  &--video {
     width: 100%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
-  .intro__bg{
+@media (min-width: 768px) and (max-width: 1024px) {
+  .intro__bg {
     height: 500px;
-    @for $i from 1 through 65 {
-      &--img:nth-child(#{$i}) {
-        background-image: url('../assets/images/bg-intro-tab/#{$i}.png');
-      }
-    }
   }
-  .intro__cadre{
+  .intro__cadre {
     top: -350px;
+  }
+
+  @for $i from 1 through $total-images {
+    .intro__bg--img:nth-child(#{$i}) {
+      background-image: url('../assets/images/bg-intro-tab/#{$i}.png');
+    }
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1440px){
-  .intro__bg{
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .intro__bg {
     height: 800px;
-    @for $i from 1 through 65 {
-      &--img:nth-child(#{$i}) {
-        background-image: url('../assets/images/bg-intro/#{$i}.png');
-      }
-    }
   }
-  .intro__cadre{
+  .intro__cadre {
     top: -550px;
     height: 300px;
     margin-left: 350px;
   }
-}
-@media (min-width: 1441px){
-  .intro__bg{
-    height: 950px;
-    @for $i from 1 through 65 {
-      &--img:nth-child(#{$i}) {
-        background-image: url('../assets/images/bg-intro/#{$i}.png');
-      }
+
+  @for $i from 1 through $total-images {
+    .intro__bg--img:nth-child(#{$i}) {
+      background-image: url('../assets/images/bg-intro-pc/#{$i}.png');
     }
   }
-  .intro__cadre{
+}
+
+@media (min-width: 1441px) {
+  .intro__bg {
+    height: 950px;
+  }
+  .intro__cadre {
     top: -650px;
     height: 350px;
     margin-left: 550px;
   }
+
+  @for $i from 1 through $total-images {
+    .intro__bg--img:nth-child(#{$i}) {
+      background-image: url('../assets/images/bg-intro/#{$i}.png');
+    }
+  }
 }
-
-
