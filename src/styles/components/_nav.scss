@@ -56,7 +56,7 @@
     &__burger:hover{
         background-color: rgba(255, 255, 255, 0.7);
     }
-    &__liste{
+    &__list{
         padding-top: 150px;
         margin-top: 0;
         padding-left: 0;
@@ -103,7 +103,7 @@
         z-index: 10;
     }
 }
-.menu--open .menu__liste{
+.menu--open .menu__list{
     right: 0;
     transition: 0.6s;
 }
@@ -121,4 +121,95 @@
 .menu--open .menu__overlay{
     display: block;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 1025px){
+    .menu{
+        position: fixed;
+        top: 20px;
+        left: 0;
+        padding: 0;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+        height: 60px;
+        z-index: 1000;
+        background-color: rgba(250, 250, 250, 0.900);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__burger{
+            display: none;
+        }
+        &__home{
+            display: flex;
+            left: 5%;
+            align-items: center;
+            position: absolute;
+            &--img{
+                position: revert-layer;
+                top: 0;
+                width: 45px;
+                height: 45px;
+                padding: 7.5px;
+                background: none;
+            }
+            &--txt{
+                visibility: visible;
+                pointer-events: visible;
+                cursor: pointer;
+                margin-left: 30px;
+                color: $c-bg;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                padding: 18px 35px;
+                font-weight: bold;
+                font-size: 24px;
+            }
+        }
+        &__list{
+            position: relative;
+            left: 40%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            z-index: 5;
+            overflow: hidden;
+            background: none;
+            height: revert-layer;
+            &--el{
+                border-bottom: none;
+            }
+            &--el:first-child{
+                border-top: none;
+            }
+            &--el a{
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $c-bg;
+            }
+        }
+
+    }
+}
+@media (min-width: 1441px){
+    .menu{
+        &__home{
+            left: 10%;
+        }
+        &__list{
+            left: 55%;
+        }
+    }
+}
+
+@media (min-width: 1700px){
+    .menu{
+        &__list{
+            left: 60%;
+        }
+    }
 }

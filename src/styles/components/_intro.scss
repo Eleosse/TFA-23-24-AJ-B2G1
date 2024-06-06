@@ -79,6 +79,11 @@
       animation-fill-mode: both;
     }
   }
+  .intro__cadre{
+    top: -550px;
+    height: 300px;
+    margin-left: 35%;
+  }
 }
 @media (min-width: 1441px){
   .intro__bg{
