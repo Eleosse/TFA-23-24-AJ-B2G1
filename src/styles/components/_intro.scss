@@ -57,7 +57,7 @@
   border-radius: 25px;
   justify-content: center;
   animation: appear 2s forwards;
-  animation-delay: #{65 * 0.1 + 2}s;
+  animation-delay: #{13 * 0.1 + 2}s;
   &--video{
     width: 100%;
   }
@@ -73,11 +73,6 @@
 @media (min-width: 1025px){
   .intro__bg{
     height: 800px;
-    &--img{
-      transform: none;
-      animation: appear 3s forwards;
-      animation-fill-mode: both;
-    }
   }
   .intro__cadre{
     top: -550px;
